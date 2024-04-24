@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">VOXA</string>
+    <string name="Web_client_ID">105152390155-rqg6r32iq01h4tmkl38oncrr0ndlsuak.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="signup">Signup</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="voxa">VOXA</string>
+    <string name="user">user</string>
+    <string name="about">About</string>
+    <string name="bio">Bio</string>
+    <string name="profile">Profile</string>
+    <string name="user_information">user information</string>
+    <string name="username_">User name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="age">Age</string>
+    <string name="_00">00</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="_00_00_2024">_00_00_2024</string>
+    <string name="mobile">Mobile</string>
+    <string name="_91_9000000009">0000000000</string>
+    <string name="axxxxxxa_gmail_com">xyz</string>
+    <string name="social_media">Social Media</string>
+    <string name="logout">Logout</string>
+    <string name="name">Name</string>
+    <string name="title_activity_signup_tab">signupTab</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login">Login</string>
+</resources>
