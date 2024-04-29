@@ -110,9 +110,10 @@
                     android:layout_width="300dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppinsmedium"
                     android:layout_marginTop="30dp"
                     android:text="Login"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     app:cornerRadius="30dp" />
 
                 <TextView

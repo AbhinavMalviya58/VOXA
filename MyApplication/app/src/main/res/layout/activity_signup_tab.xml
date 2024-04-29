@@ -226,7 +226,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:text="@string/signup"
-                android:textSize="18sp"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="25sp"
                 app:cornerRadius="30dp" />
         </LinearLayout>
     </ScrollView>
