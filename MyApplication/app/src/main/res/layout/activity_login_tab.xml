@@ -69,8 +69,8 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="411dp"
+                android:layout_height="301dp"
                 android:layout_marginTop="5dp"
                 android:orientation="vertical"
                 android:padding="20dp">
@@ -110,16 +110,16 @@
                     android:layout_width="300dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppinsmedium"
                     android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppinsmedium"
                     android:text="Login"
                     android:textSize="25sp"
                     app:cornerRadius="30dp" />
 
                 <TextView
                     android:id="@+id/forgotPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="346dp"
+                    android:layout_height="36dp"
                     android:layout_margin="@dimen/default_gap"
                     android:gravity="center"
                     android:text="Forgot Password"
@@ -140,15 +140,15 @@
 
                 <ImageView
                     android:id="@+id/facebook"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/facebook" />
 
                 <ImageView
                     android:id="@+id/google"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/google" />
             </LinearLayout>
