@@ -4,18 +4,31 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class loginTab extends AppCompatActivity {
 Button signup_btn1st;
+ImageView google;
+FirebaseAuth auth;
+FirebaseDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login_tab);
+
         signup_btn1st = findViewById(R.id.signup_btn1st);
+        google = findViewById(R.id.google);
+
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
         signup_btn1st.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -23,5 +36,15 @@ Button signup_btn1st;
                 startActivity(intent);
             }
         });
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                singIn();
+            }
+        });
+    }
+
+    private void singIn() {
+
     }
 }
