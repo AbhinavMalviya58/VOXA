@@ -8,6 +8,8 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class signupTab extends AppCompatActivity {
 Button login_btn1st;
     @Override
@@ -19,8 +21,8 @@ Button login_btn1st;
         login_btn1st.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signupTab.this,loginTab.class);
-                startActivity(intent);
+                startActivity(new Intent(signupTab.this,loginTab.class));
+                Animatoo.INSTANCE.animateSwipeRight(signupTab.this);
             }
         });
     }
