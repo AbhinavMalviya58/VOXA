@@ -61,11 +61,12 @@
                     android:layout_marginTop="0dp"
                     android:padding="5dp">
                     <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/userImg"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:background="@drawable/borderline"
                         android:layout_gravity="center"
-                        android:src="@drawable/mig1"/>
+                        />
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -74,6 +75,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/user"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/user"
@@ -90,19 +92,6 @@
                             app:lottie_loop="true"/>
 
                     </LinearLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <Button
-                            android:id="@+id/logout_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/logout" />
-
-                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -309,24 +298,30 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp">
+
                         <TextView
+                            android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/email"
-                            android:fontFamily="@font/poppinsmedium"
-                            android:textSize="15sp"
                             android:layout_alignParentStart="true"
-                            android:textStyle="bold"/>
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="@string/email"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:id="@+id/shoEmail"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#6E6C6C"
-                            android:text="@string/axxxxxxa_gmail_com"
-                            android:fontFamily="@font/poppinsmedium"
-                            android:textSize="15sp"
+                            android:layout_width="321dp"
+                            android:layout_height="match_parent"
                             android:layout_alignParentEnd="true"
-                            android:textStyle="bold"/>
+                            android:layout_marginStart="13dp"
+                            android:gravity="end"
+                            android:layout_toEndOf="@+id/textView2"
+                            android:fontFamily="@font/poppinsmedium"
+                            android:text="@string/axxxxxxa_gmail_com"
+                            android:textColor="#6E6C6C"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -365,33 +360,38 @@
                         android:useDefaultMargins="true"
                         android:rowCount="1"
                         android:columnCount="3">
-
                         <com.airbnb.lottie.LottieAnimationView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             app:lottie_loop="true"
                             app:lottie_autoPlay="true"
                             app:lottie_rawRes="@raw/twitter"/>
-
                         <com.airbnb.lottie.LottieAnimationView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             app:lottie_loop="true"
                             app:lottie_autoPlay="true"
                             app:lottie_rawRes="@raw/linkedin"/>
-
                         <com.airbnb.lottie.LottieAnimationView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             app:lottie_loop="true"
                             app:lottie_autoPlay="true"
                             app:lottie_rawRes="@raw/github"/>
-
                     </GridLayout>
-
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/logout_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/logout" />
+            </RelativeLayout>
         </LinearLayout>
 
 
