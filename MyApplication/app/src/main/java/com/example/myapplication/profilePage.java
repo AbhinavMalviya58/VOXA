@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Objects;
 
 public class profilePage extends AppCompatActivity {
-    TextView shoEmail,shoName,user;
+    TextView shoEmail,shoName,user,FamilyName,profileName;
     ImageView userImg;
     Button logout_button;
     FirebaseAuth auth;
@@ -36,21 +36,23 @@ public class profilePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
 
-        shoName = findViewById(R.id.shoName);
+//        shoName = findViewById(R.id.shoName);
         shoEmail = findViewById(R.id.shoEmail);
         user = findViewById(R.id.user);
         logout_button = findViewById(R.id.logout_button);
         userImg = findViewById(R.id.userImg);
+        FamilyName = findViewById(R.id.famName);
+        profileName = findViewById(R.id.profile);
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if(account != null){
             String userName = account.getDisplayName();
             String userEmail = account.getEmail();
+            String personFamilyName = account.getGivenName();
             user.setText(userName);
-            shoName.setText(userName);
+//            shoName.setText(userName);
             shoEmail.setText(userEmail);
-//            Uri Img = account.getPhotoUrl();
-//            userImg.setImageBitmap(Img);
+//            profileName.setText(personFamilyName);
         }
 
         auth = FirebaseAuth.getInstance();
