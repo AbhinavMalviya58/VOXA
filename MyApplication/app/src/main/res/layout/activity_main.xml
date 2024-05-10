@@ -15,18 +15,18 @@
             android:layout_height="wrap_content">
         <include
             layout="@layout/toolbar"/>
-        </RelativeLayout>
-<!--        -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
+            <com.iammert.library.readablebottombar.ReadableBottomBar
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="868dp"
+                app:rbb_tabs="@xml/tabs" />
+
 
         </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-        </RelativeLayout>
+        <!--        -->
 
     </RelativeLayout>
 

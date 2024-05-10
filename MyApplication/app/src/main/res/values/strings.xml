@@ -37,4 +37,6 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="login">Login</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
 </resources>
