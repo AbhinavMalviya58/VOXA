@@ -16,12 +16,7 @@
         <include
             layout="@layout/toolbar"/>
 
-            <com.iammert.library.readablebottombar.ReadableBottomBar
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="868dp"
-                app:rbb_tabs="@xml/tabs" />
+
 
 
         </RelativeLayout>
