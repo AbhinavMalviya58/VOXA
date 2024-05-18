@@ -194,7 +194,6 @@
                             android:layout_toEndOf="@+id/textView2"
                             android:fontFamily="@font/poppinsmedium"
                             android:text="@string/axxxxxxa_gmail_com"
-                            android:textColor="#6E6C6C"
                             android:textSize="14sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -240,7 +239,7 @@
                             android:layout_alignParentStart="true"
                             android:textStyle="bold"/>
                         <TextView
-                            android:id="@+id/famName"
+                            android:id="@+id/genderName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="#6E6C6C"

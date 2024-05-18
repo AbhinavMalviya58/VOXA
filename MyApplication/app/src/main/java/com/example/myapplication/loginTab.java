@@ -55,11 +55,14 @@ GoogleSignInOptions gso;
         });
        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                .requestIdToken(getString(R.string.Web_client_ID))
+               .requestEmail()
                .build();
 
        mAuth = FirebaseAuth.getInstance();
        mUser = mAuth.getCurrentUser();
        gsc = GoogleSignIn.getClient(this,gso);
+
+
 
        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
        if(account != null){
@@ -96,6 +99,7 @@ GoogleSignInOptions gso;
     }
 
     private void firebaseAuthWithGoogle(String idToken){
+
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken,null);
         mAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
