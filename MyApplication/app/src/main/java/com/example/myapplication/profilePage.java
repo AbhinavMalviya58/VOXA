@@ -53,7 +53,8 @@ public class profilePage extends AppCompatActivity {
             user.setText(userName);
 //            shoName.setText(userName);
             shoEmail.setText(userEmail);
-            Gender.setText(userEmail);
+
+
 //            profileName.setText(personFamilyName);
         }
 
@@ -69,6 +70,7 @@ public class profilePage extends AppCompatActivity {
                 logout();
             }
         });
+
 //        Toolbar
         Toolbar toolbar = findViewById(R.id.materialToolbar);
         setSupportActionBar(toolbar);
