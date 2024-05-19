@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.myapplication.Models.Users;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -45,7 +46,10 @@ GoogleSignInOptions gso;
         signup_btn1st = findViewById(R.id.signup_btn1st);
         google = findViewById(R.id.google);
 
+//        Database
         database = FirebaseDatabase.getInstance();
+
+
         signup_btn1st.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,11 +108,16 @@ GoogleSignInOptions gso;
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     FirebaseUser user = mAuth.getCurrentUser();
-                    UpdateUI(user);
+                    Users users = new Users();
+                    users.setUserName(user.getDisplayName());
+//                    users.setProfilePic(user.getPhotoUrl().toString());
+                    users.setUserId(user.getUid());
+                    database.getReference().child("Users").child(user.getUid()).setValue(users);
+//                    UpdateUI(user);
                 }
                 else {
                     Toast.makeText(loginTab.this,""+task.getException(),Toast.LENGTH_SHORT).show();
-                    UpdateUI(null);
+//                    UpdateUI(null);
                     finish();
                 }
             }
