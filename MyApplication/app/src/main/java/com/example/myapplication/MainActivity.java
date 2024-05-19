@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class MainActivity extends AppCompatActivity {
     ImageView profilePic;
     @Override
@@ -20,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,
                         "Your Profile", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, profilePage.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, profilePage.class));
+                Animatoo.INSTANCE.animateShrink(MainActivity.this);
             }
         });
     }
