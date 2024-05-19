@@ -62,8 +62,6 @@ GoogleSignInOptions gso;
        mUser = mAuth.getCurrentUser();
        gsc = GoogleSignIn.getClient(this,gso);
 
-
-
        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
        if(account != null){
            navigateToSecondActivity();
@@ -102,19 +100,19 @@ GoogleSignInOptions gso;
 
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken,null);
         mAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            UpdateUI(user);
-                        }
-                        else {
-                            Toast.makeText(loginTab.this,""+task.getException(),Toast.LENGTH_SHORT).show();
-                            UpdateUI(null);
-                            finish();
-                        }
-                    }
-                });
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    UpdateUI(user);
+                }
+                else {
+                    Toast.makeText(loginTab.this,""+task.getException(),Toast.LENGTH_SHORT).show();
+                    UpdateUI(null);
+                    finish();
+                }
+            }
+        });
     }
 
     private void UpdateUI(FirebaseUser user) {
@@ -128,6 +126,4 @@ GoogleSignInOptions gso;
         startActivity(new Intent(loginTab.this, MainActivity.class));
         Animatoo.INSTANCE.animateZoom(loginTab.this);
     }
-
-
 }
