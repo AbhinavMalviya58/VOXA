@@ -1,11 +1,11 @@
 package com.example.myapplication.Models;
 
 public class Users {
-    String profilePic , userMame , mail , password , userId , lastMessage;
+    String profilePic , userName , mail , password , userId , lastMessage;
 
-    public Users(String profilePic, String userMame, String mail, String password, String userId, String lastMessage) {
+    public Users(String profilePic, String userName, String mail, String password, String userId, String lastMessage) {
         this.profilePic = profilePic;
-        this.userMame = userMame;
+        this.userName = userName;
         this.mail = mail;
         this.password = password;
         this.userId = userId;
@@ -26,12 +26,12 @@ public class Users {
         this.profilePic = profilePic;
     }
 
-    public String getUserMame() {
-        return userMame;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUserMame(String userMame) {
-        this.userMame = userMame;
+    public void setUserName(String userMame) {
+        this.userName = userMame;
     }
 
     public String getMail() {
