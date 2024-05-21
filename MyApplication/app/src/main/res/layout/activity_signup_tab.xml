@@ -55,11 +55,9 @@
         app:layout_constraintTop_toTopOf="@+id/tab_layout"
         app:layout_constraintVertical_bias="0.830" />
 
-    <ScrollView
-        android:layout_width="407dp"
-        android:layout_height="605dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="635dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tab_layout"
@@ -70,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:orientation="vertical"
-            android:padding="20dp"
+            android:padding="10dp"
             tools:ignore="UselessParent">
 
             <!--                <ImageView-->
@@ -83,6 +81,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
 
@@ -108,22 +107,23 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
-<!--                <com.airbnb.lottie.LottieAnimationView-->
-<!--                    android:layout_width="50dp"-->
-<!--                    android:layout_height="60dp"-->
-<!--                    android:layout_alignParentStart="true"-->
-<!--                    android:layout_alignParentTop="true"-->
-<!--                    android:layout_alignParentBottom="true"-->
-<!--                    android:layout_marginStart="0dp"-->
-<!--                    android:layout_marginTop="0dp"-->
-<!--                    android:layout_marginEnd="10dp"-->
-<!--                    android:layout_marginBottom="0dp"-->
-<!--                    android:layout_toStartOf="@+id/signup_email"-->
-<!--                    app:lottie_autoPlay="true"-->
-<!--                    app:lottie_loop="true"-->
-<!--                    app:lottie_rawRes="@raw/email" />-->
+                <!--                <com.airbnb.lottie.LottieAnimationView-->
+                <!--                    android:layout_width="50dp"-->
+                <!--                    android:layout_height="60dp"-->
+                <!--                    android:layout_alignParentStart="true"-->
+                <!--                    android:layout_alignParentTop="true"-->
+                <!--                    android:layout_alignParentBottom="true"-->
+                <!--                    android:layout_marginStart="0dp"-->
+                <!--                    android:layout_marginTop="0dp"-->
+                <!--                    android:layout_marginEnd="10dp"-->
+                <!--                    android:layout_marginBottom="0dp"-->
+                <!--                    android:layout_toStartOf="@+id/signup_email"-->
+                <!--                    app:lottie_autoPlay="true"-->
+                <!--                    app:lottie_loop="true"-->
+                <!--                    app:lottie_rawRes="@raw/email" />-->
 
                 <EditText
                     android:id="@+id/signup_email"
@@ -146,22 +146,23 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
-<!--                <com.airbnb.lottie.LottieAnimationView-->
-<!--                    android:layout_width="50dp"-->
-<!--                    android:layout_height="60dp"-->
-<!--                    android:layout_alignParentStart="true"-->
-<!--                    android:layout_alignParentTop="true"-->
-<!--                    android:layout_alignParentBottom="true"-->
-<!--                    android:layout_marginStart="0dp"-->
-<!--                    android:layout_marginTop="0dp"-->
-<!--                    android:layout_marginEnd="10dp"-->
-<!--                    android:layout_marginBottom="0dp"-->
-<!--                    android:layout_toStartOf="@+id/signup_password"-->
-<!--                    app:lottie_autoPlay="true"-->
-<!--                    app:lottie_loop="true"-->
-<!--                    app:lottie_rawRes="@raw/password" />-->
+                <!--                <com.airbnb.lottie.LottieAnimationView-->
+                <!--                    android:layout_width="50dp"-->
+                <!--                    android:layout_height="60dp"-->
+                <!--                    android:layout_alignParentStart="true"-->
+                <!--                    android:layout_alignParentTop="true"-->
+                <!--                    android:layout_alignParentBottom="true"-->
+                <!--                    android:layout_marginStart="0dp"-->
+                <!--                    android:layout_marginTop="0dp"-->
+                <!--                    android:layout_marginEnd="10dp"-->
+                <!--                    android:layout_marginBottom="0dp"-->
+                <!--                    android:layout_toStartOf="@+id/signup_password"-->
+                <!--                    app:lottie_autoPlay="true"-->
+                <!--                    app:lottie_loop="true"-->
+                <!--                    app:lottie_rawRes="@raw/password" />-->
 
                 <EditText
                     android:id="@+id/signup_password"
@@ -181,43 +182,44 @@
                     android:textColorHint="@color/gray" />
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
 
-<!--                <com.airbnb.lottie.LottieAnimationView-->
-<!--                    android:layout_width="50dp"-->
+<!--                &lt;!&ndash;                <com.airbnb.lottie.LottieAnimationView&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_width="50dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_height="60dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_alignParentStart="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_alignParentTop="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginStart="0dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginTop="0dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginEnd="10dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_marginBottom="0dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    android:layout_toStartOf="@+id/signup_confirm"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:lottie_autoPlay="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:lottie_loop="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                    app:lottie_rawRes="@raw/confirmpassword" />&ndash;&gt;-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/signup_confirm"-->
+<!--                    android:layout_width="365dp"-->
 <!--                    android:layout_height="60dp"-->
-<!--                    android:layout_alignParentStart="true"-->
-<!--                    android:layout_alignParentTop="true"-->
-<!--                    android:layout_alignParentBottom="true"-->
-<!--                    android:layout_marginStart="0dp"-->
-<!--                    android:layout_marginTop="0dp"-->
-<!--                    android:layout_marginEnd="10dp"-->
-<!--                    android:layout_marginBottom="0dp"-->
-<!--                    android:layout_toStartOf="@+id/signup_confirm"-->
-<!--                    app:lottie_autoPlay="true"-->
-<!--                    app:lottie_loop="true"-->
-<!--                    app:lottie_rawRes="@raw/confirmpassword" />-->
-
-                <EditText
-                    android:id="@+id/signup_confirm"
-                    android:layout_width="365dp"
-                    android:layout_height="60dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="0dp"
-                    android:autofillHints=""
-                    android:background="@drawable/edittext_bkg"
-                    android:drawablePadding="8dp"
-                    android:hint="@string/confirm_password"
-                    android:inputType="textPassword"
-                    android:padding="8dp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray" />
-            </RelativeLayout>
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginEnd="0dp"-->
+<!--                    android:autofillHints=""-->
+<!--                    android:background="@drawable/edittext_bkg"-->
+<!--                    android:drawablePadding="8dp"-->
+<!--                    android:hint="@string/confirm_password"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/gray" />-->
+<!--            </RelativeLayout>-->
 
             <Button
                 android:id="@+id/signup_button"
@@ -225,10 +227,10 @@
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:text="@string/signup"
                 android:fontFamily="@font/poppinsmedium"
+                android:text="@string/signup"
                 android:textSize="25sp"
                 app:cornerRadius="30dp" />
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
