@@ -18,6 +18,12 @@ public class Users {
 
     // SignUp
 
+    public Users(String userName, String mail, String password) {
+        this.userName = userName;
+        this.mail = mail;
+        this.password = password;
+    }
+
     public String getProfilePic() {
         return profilePic;
     }
