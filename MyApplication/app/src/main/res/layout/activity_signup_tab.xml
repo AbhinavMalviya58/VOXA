@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:orientation="vertical"
-            android:padding="10dp"
+            android:padding="20dp"
             tools:ignore="UselessParent">
 
             <!--                <ImageView-->
@@ -78,37 +78,23 @@
             <!--                    android:contentDescription="@string/todo"-->
             <!--                    android:src="@drawable/mig1" />-->
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
 
 
                 <EditText
                     android:id="@+id/name"
-                    android:layout_width="365dp"
-                    android:layout_height="58dp"
-                    android:layout_alignParentEnd="true"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="0dp"
-                    android:layout_marginEnd="2dp"
+                    android:layout_alignParentEnd="true"
                     android:autofillHints=""
-
                     android:background="@drawable/edittext_bkg"
-                    android:drawablePadding="10dp"
+                    android:drawablePadding="8dp"
                     android:hint="@string/name"
                     android:inputType="textEmailAddress"
                     android:padding="8dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
 
                 <!--                <com.airbnb.lottie.LottieAnimationView-->
                 <!--                    android:layout_width="50dp"-->
@@ -127,7 +113,7 @@
 
                 <EditText
                     android:id="@+id/signup_email"
-                    android:layout_width="365dp"
+                    android:layout_width="300dp"
                     android:layout_height="58dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
@@ -141,13 +127,6 @@
                     android:padding="8dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
 
                 <!--                <com.airbnb.lottie.LottieAnimationView-->
                 <!--                    android:layout_width="50dp"-->
@@ -166,7 +145,7 @@
 
                 <EditText
                     android:id="@+id/signup_password"
-                    android:layout_width="365dp"
+                    android:layout_width="300dp"
                     android:layout_height="58dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
@@ -180,7 +159,6 @@
                     android:padding="8dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray" />
-            </RelativeLayout>
 
 <!--            <RelativeLayout-->
 <!--                android:layout_width="match_parent"-->
@@ -223,7 +201,7 @@
 
             <Button
                 android:id="@+id/signup_button"
-                android:layout_width="320dp"
+                android:layout_width="300dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
