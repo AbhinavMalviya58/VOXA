@@ -27,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class signupTab extends AppCompatActivity {
     ActivityMainBinding binding;
     TextView name, signup_email, signup_password, signup_confirm;
-    Button login_btn1st;
+    Button login_btn1st, signup_button;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
     DatabaseReference reference;
@@ -37,22 +37,21 @@ public class signupTab extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        EdgeToEdge.enable(this);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_signup_tab);
 
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
 
 
         login_btn1st = findViewById(R.id.login_btn1st);
-//        signup_button = findViewById(R.id.signup_button);
+        signup_button = findViewById(R.id.signup_button);
         name = findViewById(R.id.name);
         signup_email = findViewById(R.id.signup_email);
         signup_password = findViewById(R.id.signup_password);
 
 
-        binding.setOnClickListener(new View.OnClickListener() {
+        signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -64,7 +63,7 @@ public class signupTab extends AppCompatActivity {
                             Users user = new Users(name.getText().toString(),signup_email.getText().toString(),signup_password.getText().toString());
                             String id = task.getResult().getUser().getUid();
                             database.getReference().child("Users").child(id).setValue(user);
-                            Toast.makeText(signupTab.this, "User created successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(signupTab.this, "User Created Successful", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(signupTab.this, "User already login", Toast.LENGTH_SHORT).show();
                         }
