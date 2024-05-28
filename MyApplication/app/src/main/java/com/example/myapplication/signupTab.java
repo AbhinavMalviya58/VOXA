@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -55,6 +56,17 @@ public class signupTab extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(TextUtils.isEmpty(name.getText().toString())){
+                    name.setError("Enter your name");
+                    return;
+                }if(TextUtils.isEmpty(signup_email.getText().toString())){
+                    signup_email.setError("Email is compulsory");
+                    return;
+                }if (TextUtils.isEmpty(signup_password.getText().toString())){
+                    signup_password.setError("please entre your password");
+                    return;
+                }else {
+//                    Toast.makeText(signupTab.this, "", Toast.LENGTH_SHORT).show();
                 mAuth.createUserWithEmailAndPassword(signup_email.getText().toString(),signup_password.getText().toString())
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -69,6 +81,8 @@ public class signupTab extends AppCompatActivity {
                         }
                     }
                 });
+                }
+
             }
         });
 
