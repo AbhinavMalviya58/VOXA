@@ -3,6 +3,8 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -30,7 +32,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class loginTab extends AppCompatActivity {
 Button signup_btn1st;
-ImageView google;
+
+Animation animation;
+ImageView google,logo;
 FirebaseAuth mAuth;
 FirebaseDatabase database;
 FirebaseUser mUser;
@@ -45,9 +49,14 @@ GoogleSignInOptions gso;
 
         signup_btn1st = findViewById(R.id.signup_btn1st);
         google = findViewById(R.id.google);
+        logo = findViewById(R.id.logo);
+
+        animation = AnimationUtils.loadAnimation(loginTab.this,R.anim.imganim);
+        logo.startAnimation(animation);
 
 //        Database
         database = FirebaseDatabase.getInstance();
+
 
 
         signup_btn1st.setOnClickListener(new View.OnClickListener() {
