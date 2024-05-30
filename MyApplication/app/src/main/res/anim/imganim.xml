@@ -9,4 +9,5 @@
         android:repeatMode="reverse"
         android:repeatCount="infinite"
         android:interpolator="@android:anim/cycle_interpolator"/>
+
 </set>
