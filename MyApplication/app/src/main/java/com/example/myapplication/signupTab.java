@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +30,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class signupTab extends AppCompatActivity {
     ActivityMainBinding binding;
+    ImageView logo;
+
+    Animation animation;
     TextView name, signup_email, signup_password, signup_confirm;
     Button login_btn1st, signup_button;
     FirebaseAuth mAuth;
@@ -50,6 +56,10 @@ public class signupTab extends AppCompatActivity {
         name = findViewById(R.id.name);
         signup_email = findViewById(R.id.signup_email);
         signup_password = findViewById(R.id.signup_password);
+        logo = findViewById(R.id.logo);
+
+        animation = AnimationUtils.loadAnimation(signupTab.this,R.anim.imganim);
+        logo.startAnimation(animation);
 
 
         signup_button.setOnClickListener(new View.OnClickListener() {
