@@ -13,12 +13,28 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <include
-            layout="@layout/toolbar"/>
 
+            <include layout="@layout/toolbar" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center">
 
+                <TextView
+                    android:id="@+id/guessTheNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tab_bkg"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Guess The Number "
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
+            </LinearLayout>
         </RelativeLayout>
 
         <!--        -->
