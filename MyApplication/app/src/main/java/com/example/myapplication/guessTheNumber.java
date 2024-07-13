@@ -21,6 +21,5 @@ public class guessTheNumber extends AppCompatActivity {
 //            return insets;
 //        });
 
-
     }
 }
