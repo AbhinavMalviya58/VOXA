@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 public class MainActivity extends AppCompatActivity {
     ImageView profilePic;
     TextView guessTheNumber;
+    Button button;
     Animation animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         profilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,
+               Toast.makeText(MainActivity.this,
                         "Your Profile", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(MainActivity.this, profilePage.class));
                 Animatoo.INSTANCE.animateShrink(MainActivity.this);
