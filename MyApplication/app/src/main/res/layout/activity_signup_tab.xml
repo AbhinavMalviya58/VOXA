@@ -162,6 +162,14 @@
                     android:padding="8dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray" />
+            <CheckBox
+                android:layout_gravity="right"
+                android:id="@+id/showPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Password"
+                android:layout_marginRight="10dp"
+                app:buttonTint="@color/goldenrod" />
 
 <!--            <RelativeLayout-->
 <!--                android:layout_width="match_parent"-->
