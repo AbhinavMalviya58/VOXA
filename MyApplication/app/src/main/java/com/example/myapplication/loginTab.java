@@ -2,10 +2,14 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -32,7 +36,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class loginTab extends AppCompatActivity {
 Button signup_btn1st;
-
+private EditText login_password;
+private CheckBox showPassword;
 Animation animation;
 ImageView google,logo;
 FirebaseAuth mAuth;
@@ -50,6 +55,8 @@ GoogleSignInOptions gso;
         signup_btn1st = findViewById(R.id.signup_btn1st);
         google = findViewById(R.id.google);
         logo = findViewById(R.id.logo);
+        login_password = findViewById(R.id.login_password);
+        showPassword = findViewById(R.id.showPassword);
 
         animation = AnimationUtils.loadAnimation(loginTab.this,R.anim.imganim);
         logo.startAnimation(animation);
@@ -57,10 +64,20 @@ GoogleSignInOptions gso;
 //        Database
         database = FirebaseDatabase.getInstance();
 
-
+        showPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    login_password.setTransformationMethod(null);
+                }else {
+                    login_password.setTransformationMethod(new PasswordTransformationMethod());
+                }
+            }
+        });
 
         signup_btn1st.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
                 startActivity(new Intent(loginTab.this,signupTab.class));
                 Animatoo.INSTANCE.animateSwipeLeft(loginTab.this);
