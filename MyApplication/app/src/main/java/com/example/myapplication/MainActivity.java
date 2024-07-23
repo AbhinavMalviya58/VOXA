@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Guess The Number", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, guessTheNumber.class));
+                Animatoo.INSTANCE.animateSlideRight(MainActivity.this);
             }
         });
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                Toast.makeText(MainActivity.this,
                         "Your Profile", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(MainActivity.this, profilePage.class));
-                Animatoo.INSTANCE.animateShrink(MainActivity.this);
+                Animatoo.INSTANCE.animateSlideUp(MainActivity.this);
             }
         });
     }
