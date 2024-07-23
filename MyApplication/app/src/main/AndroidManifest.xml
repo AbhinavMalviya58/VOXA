@@ -15,11 +15,15 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".guessTheNumber"
+            android:name=".winActivity"
             android:exported="false" />
         <activity
+            android:name=".guessTheNumber"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".signupTab"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".loginTab"
             android:exported="true">
