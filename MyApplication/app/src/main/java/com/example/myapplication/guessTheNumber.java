@@ -8,12 +8,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import java.util.Objects;
 
 public class guessTheNumber extends AppCompatActivity {
 
+    int num;
+    int numCheck;
+    int chance = 10;
+    int iterate = 0;
+
+    String str;
     EditText guessTheNumber;
-    TextView guessTheNumberTextView;
-    Button guessTheNumberButton;
+    TextView guessTheNumberTextView, number;
+    Button guessTheNumberButton, resetBtn;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +32,16 @@ public class guessTheNumber extends AppCompatActivity {
         guessTheNumber = findViewById(R.id.guessTheNumber);
         guessTheNumberTextView = findViewById(R.id.guessTheNumberTextView);
         guessTheNumberButton = findViewById(R.id.guessTheNumberBtn);
+        resetBtn = findViewById(R.id.resetBtn);
+        number = findViewById(R.id.number);
 
-//        Random random = new Random();
-//        int numberToGuess = random.nextInt(100) + 1; // Generates a random number between 1 and 100
-//        int numberOfTries = 0;
-//        boolean hasGuessedCorrectly = false;
+        Toolbar toolbar = findViewById(R.id.materialToolbar);
+        setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        num = (int) (100 * Math.random());
+//        number.setText(Integer.toString(num));
+
         guessTheNumberButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,10 +50,47 @@ public class guessTheNumber extends AppCompatActivity {
                     guessTheNumber.setError("Empty");
                     Toast.makeText(guessTheNumber.this, "Number is empty", Toast.LENGTH_SHORT).show();
                 }else {
-                int kg = Integer.parseInt(s);
-                double pound = 2.205 * kg;
-                guessTheNumberTextView.setText("The corresponding value in pound is " + pound);
+                    try {
+                        numCheck = Integer.parseInt(guessTheNumber.getText().toString());
+                    }
+                    catch(Exception e) {
+                    }
+
+                    if (num == numCheck || chance == iterate) {
+                        if (chance == iterate) {
+                            str = "***You lost***";
+                            guessTheNumberButton.setEnabled(false);
+                        } else
+                            guessTheNumberTextView.setText("Congratulations You guessed the number");
+//                            number.setText(Integer.toString(num));
+//                            str = "***Bingo***";
+//                        Intent i = new Intent("com.example.winActivity");
+//                        i.putExtra("key1", str);
+//                        startActivity(i);
+                    }
+                    if (numCheck <= 100 && numCheck >= 0) {
+                        iterate++;
+                        if (num < numCheck) {
+                            guessTheNumberTextView.setText("Guess is larger.");
+                        }
+                        if (num > numCheck) {
+                            guessTheNumberTextView.setText("Guess is smaller.");
+                        }
+                    } else {
+                        guessTheNumberTextView.setText("Invalid Option");
+                    }
                 }
+            }
+        });
+        resetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iterate = 0;
+                guessTheNumber.getText().clear();
+                guessTheNumberButton.setEnabled(true);
+//                num = (int) (100 * Math.random());
+//                number.setText(Integer.toString(num));
+                recreate();
             }
         });
 
