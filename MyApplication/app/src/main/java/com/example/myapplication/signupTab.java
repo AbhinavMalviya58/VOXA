@@ -3,10 +3,13 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +37,7 @@ public class signupTab extends AppCompatActivity {
 
     Animation animation;
     TextView name, signup_email, signup_password, signup_confirm;
+    private CheckBox showPassword;
     Button login_btn1st, signup_button;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
@@ -53,6 +57,7 @@ public class signupTab extends AppCompatActivity {
 
         login_btn1st = findViewById(R.id.login_btn1st);
         signup_button = findViewById(R.id.signup_button);
+        showPassword = findViewById(R.id.showPassword);
         name = findViewById(R.id.name);
         signup_email = findViewById(R.id.signup_email);
         signup_password = findViewById(R.id.signup_password);
@@ -60,7 +65,16 @@ public class signupTab extends AppCompatActivity {
 
         animation = AnimationUtils.loadAnimation(signupTab.this,R.anim.imganim);
         logo.startAnimation(animation);
-
+        showPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    signup_password.setTransformationMethod(null);
+                }else {
+                    signup_password.setTransformationMethod(new PasswordTransformationMethod());
+                }
+            }
+        });
 
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +109,6 @@ public class signupTab extends AppCompatActivity {
 
             }
         });
-
 
         login_btn1st.setOnClickListener(new View.OnClickListener() {
             @Override
