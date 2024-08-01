@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +20,7 @@ public class guessTheNumber extends AppCompatActivity {
     int numCheck;
     int chance = 10;
     int iterate = 0;
-
+    Vibrator vibrator;
     String str;
     EditText guessTheNumber;
     TextView guessTheNumberTextView, number;
@@ -34,6 +36,8 @@ public class guessTheNumber extends AppCompatActivity {
         guessTheNumberButton = findViewById(R.id.guessTheNumberBtn);
         resetBtn = findViewById(R.id.resetBtn);
         number = findViewById(R.id.number);
+
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         Toolbar toolbar = findViewById(R.id.materialToolbar);
         setSupportActionBar(toolbar);
@@ -62,19 +66,14 @@ public class guessTheNumber extends AppCompatActivity {
                             guessTheNumberButton.setEnabled(false);
                         } else
                             guessTheNumberTextView.setText("Congratulations You guessed the number");
-//                            number.setText(Integer.toString(num));
-//                            str = "***Bingo***";
-//                        Intent i = new Intent("com.example.winActivity");
-//                        i.putExtra("key1", str);
-//                        startActivity(i);
                     }
                     if (numCheck <= 100 && numCheck >= 0) {
                         iterate++;
                         if (num < numCheck) {
-                            guessTheNumberTextView.setText("Guess is larger.");
+                            guessTheNumberTextView.setText("Too high Try again.");
                         }
                         if (num > numCheck) {
-                            guessTheNumberTextView.setText("Guess is smaller.");
+                            guessTheNumberTextView.setText("Too low Try again.");
                         }
                     } else {
                         guessTheNumberTextView.setText("Invalid Option");
