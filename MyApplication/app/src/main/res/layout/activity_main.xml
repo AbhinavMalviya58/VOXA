@@ -16,14 +16,30 @@
 
             <include layout="@layout/toolbar" />
 
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linearLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:layout_marginEnd="372dp"
+                android:layout_marginBottom="798dp"
+                android:gravity="end|right"
+                android:src="@drawable/add"
+                app:elevation="3dp"
+                app:fabSize="normal" />
+
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="0dp"
-                android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
@@ -33,23 +49,22 @@
                     android:background="@drawable/tab_bkg"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:text="Guess The Number "
+                    android:text="Gaming Zone"
                     android:textSize="15sp"
                     android:textStyle="bold" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:src="@drawable/chatting"/>
+                        android:src="@drawable/chatting" />
                 </LinearLayout>
 
             </LinearLayout>
         </RelativeLayout>
-
-        <!--        -->
-
     </RelativeLayout>
 
 
