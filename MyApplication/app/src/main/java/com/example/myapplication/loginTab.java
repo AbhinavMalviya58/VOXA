@@ -35,8 +35,8 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class loginTab extends AppCompatActivity {
-Button signup_btn1st;
-private EditText login_password;
+private EditText login_password, login_email;
+Button signup_btn1st, login_button;
 private CheckBox showPassword;
 Animation animation;
 ImageView google,logo;
@@ -53,6 +53,8 @@ GoogleSignInOptions gso;
         setContentView(R.layout.activity_login_tab);
 
         signup_btn1st = findViewById(R.id.signup_btn1st);
+        login_button = findViewById(R.id.login_button);
+        login_email = findViewById(R.id.login_email);
         google = findViewById(R.id.google);
         logo = findViewById(R.id.logo);
         login_password = findViewById(R.id.login_password);
