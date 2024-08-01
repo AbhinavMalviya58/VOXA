@@ -1,2 +1,9 @@
 # VOXA
-![Build and Deploy Full Stack ChatPDF Clone](/Voxa.png)
+![VOXA img](/Voxa.png)
+![VOXA img](/img/img%201.jpg)
+![VOXA img](/img/img%202.jpg)
+![VOXA img](/img/img%203.jpg)
+![VOXA img](/img/img%204.jpg)
+![VOXA img](/img/img%205.jpg)
+![VOXA img](/img/img%206.jpg)
+![VOXA img](/img/img%207.jpg)
