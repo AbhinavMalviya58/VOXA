@@ -25,7 +25,5 @@ public class emailLogin extends loginTab{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
     }
 }
