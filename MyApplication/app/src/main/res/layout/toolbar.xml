@@ -10,32 +10,36 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/borderline"
-        app:subtitle="Sub"
-        app:title="AndroidlyToolbar">
+        android:background="@drawable/borderline">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/goldenrod"
-                android:textStyle="bold"
-                android:fontFamily="@font/madimi"
-                android:textSize="30sp"
-                android:layout_centerVertical="true"
-                android:text="@string/app_name" />
-
             <ImageView
                 android:id="@+id/profilePic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo" />
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/goldenrod"-->
+<!--                android:textStyle="bold"-->
+<!--                android:fontFamily="@font/madimi"-->
+<!--                android:textSize="30sp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="@string/app_name" />-->
+
+            <ImageView
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:background="@drawable/borderline"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="3.5dp"
-                android:src="@drawable/logo" />
+                android:layout_marginEnd="21dp"
+                android:src="@drawable/chat" />
+
+
 
         </RelativeLayout>
 
