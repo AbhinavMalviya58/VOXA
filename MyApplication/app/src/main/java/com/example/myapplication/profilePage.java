@@ -54,7 +54,6 @@ public class profilePage extends AppCompatActivity {
 //            shoName.setText(userName);
             shoEmail.setText(userEmail);
 
-
 //            profileName.setText(personFamilyName);
         }
 

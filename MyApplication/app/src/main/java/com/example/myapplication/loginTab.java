@@ -52,7 +52,7 @@ GoogleSignInOptions gso;
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login_tab);
 
-        signup_btn1st = findViewById(R.id.signup_btn1st);
+//        signup_btn1st = findViewById(R.id.signup_btn1st);
         login_button = findViewById(R.id.login_button);
         login_email = findViewById(R.id.login_email);
         google = findViewById(R.id.google);
@@ -61,7 +61,7 @@ GoogleSignInOptions gso;
         showPassword = findViewById(R.id.showPassword);
 
         animation = AnimationUtils.loadAnimation(loginTab.this,R.anim.imganim);
-        logo.startAnimation(animation);
+//        logo.startAnimation(animation);
 
 //        Database
         database = FirebaseDatabase.getInstance();
@@ -77,14 +77,6 @@ GoogleSignInOptions gso;
             }
         });
 
-        signup_btn1st.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                startActivity(new Intent(loginTab.this,signupTab.class));
-                Animatoo.INSTANCE.animateSwipeLeft(loginTab.this);
-            }
-        });
        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                .requestIdToken(getString(R.string.Web_client_ID))
                .requestEmail()
