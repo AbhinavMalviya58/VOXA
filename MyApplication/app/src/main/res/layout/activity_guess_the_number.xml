@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".guessTheNumber">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,9 +18,9 @@
             android:id="@+id/materialToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingEnd="10dp"
             android:background="@drawable/borderline"
             android:minHeight="?attr/actionBarSize"
+            android:paddingEnd="10dp"
             android:theme="?attr/actionBarTheme">
 
             <TextView
@@ -27,61 +28,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/madimi"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/madimi"
                 android:gravity="center"
                 android:text="Welcome to Guess the Number game!"
                 android:textSize="15dp"
                 android:textStyle="italic" />
 
-<!--            <com.airbnb.lottie.LottieAnimationView-->
-<!--                android:layout_width="40dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:layout_gravity="end"-->
-<!--                app:lottie_rawRes="@raw/settings"-->
-<!--                app:lottie_autoPlay="true"-->
-<!--                app:lottie_loop="true"/>-->
+            <!--            <com.airbnb.lottie.LottieAnimationView-->
+            <!--                android:layout_width="40dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_gravity="end"-->
+            <!--                app:lottie_rawRes="@raw/settings"-->
+            <!--                app:lottie_autoPlay="true"-->
+            <!--                app:lottie_loop="true"/>-->
         </com.google.android.material.appbar.MaterialToolbar>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-                <TextView
+            <TextView
                 android:id="@+id/guessTheNumberTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                    android:fontFamily="@font/madimi"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/madimi"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="I have selected a number between \n 1 and 100. \nTry to guess it."
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-                <TextView
+            <TextView
                 android:id="@+id/number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                    android:fontFamily="@font/madimi"
                 android:layout_marginBottom="50dp"
+                android:fontFamily="@font/madimi"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text=""
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-                <EditText
+            <EditText
                 android:id="@+id/guessTheNumber"
                 android:layout_width="200dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="50dp"
-                    android:fontFamily="@font/madimi"
                 android:autofillHints=""
+                android:fontFamily="@font/madimi"
                 android:gravity="center"
                 android:hint="Enter your guess"
                 android:inputType="number"
@@ -91,45 +92,46 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.795" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                    <Button
-                            android:id="@+id/guessTheNumberBtn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="50dp"
-                            android:text="Guess"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView" />
-                    <Button
-                            android:id="@+id/resetBtn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="50dp"
-                            android:text="Reset"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView" />
-                </LinearLayout>
+                <Button
+                    android:id="@+id/guessTheNumberBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Guess"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+                <Button
+                    android:id="@+id/resetBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="Reset"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
             </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:gravity="bottom"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent">-->
-<!--        <include layout="@layout/numpad" />-->
-<!--    </LinearLayout>-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="bottom"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
+    <!--        <include layout="@layout/numpad" />-->
+    <!--    </LinearLayout>-->
 
 
 </RelativeLayout>

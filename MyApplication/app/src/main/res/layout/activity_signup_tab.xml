@@ -154,7 +154,6 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="2dp"
                     android:autofillHints=""
-                    android:drawableLeft="@drawable/baseline_lock_24"
                     android:background="@drawable/edittext_bkg"
                     android:drawablePadding="8dp"
                     android:hint="@string/password"
