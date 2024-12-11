@@ -36,9 +36,9 @@ public class signupTab extends AppCompatActivity {
     ImageView logo;
 
     Animation animation;
-    TextView name, signup_email, signup_password, signup_confirm;
+    TextView name, signup_email, signup_password, login_btn1st,signup_confirm;
     private CheckBox showPassword;
-    Button login_btn1st, signup_button;
+    Button signup_button;
     FirebaseAuth mAuth;
     FirebaseDatabase database;
     DatabaseReference reference;
