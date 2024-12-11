@@ -20,20 +20,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
             android:fontFamily="@font/poppinsmedium"
             android:text="@string/app_name"
-            android:layout_marginEnd="5dp"
             android:textSize="25sp" />
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            android:src="@drawable/logo"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="70dp" />
+            android:src="@drawable/bglogo"
+            tools:ignore="MissingConstraints" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,6 +64,7 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/join_voxa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/madimi"
@@ -87,13 +87,13 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
         <LinearLayout
+            android:id="@+id/google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/boederline"
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/google"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
@@ -108,6 +108,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -115,29 +116,6 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/apple"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/apple" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sign in with Apple"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/boederline"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/facebook"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
@@ -209,7 +187,8 @@
                 android:layout_marginTop="5dp"
                 android:orientation="vertical">
 
-                <EditText
+
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/login_email"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
@@ -217,9 +196,10 @@
                     android:layout_marginTop="0dp"
                     android:drawablePadding="8dp"
                     android:hint="Email or Phone"
+                    android:inputType="textEmailAddress"
                     android:padding="8dp"
-                    android:textColor="@color/black"
                     android:textColorHint="@color/gray" />
+
 
                 <EditText
                     android:id="@+id/login_password"
@@ -231,7 +211,6 @@
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:padding="8dp"
-                    android:textColor="@color/black"
                     android:textColorHint="@color/gray" />
 
                 <CheckBox
@@ -241,21 +220,22 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="10dp"
                     android:text="Show Password"
-                    app:buttonTint="@color/goldenrod" />
+                    app:buttonTint="@color/salmon" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="start|center">
 
-                <CheckBox
-                    android:id="@+id/Remember_me"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="2dp"
-                    android:textSize="18dp"
-                    android:text="Remember me ."
-                    app:buttonTint="@color/black" />
+                    <CheckBox
+                        android:id="@+id/Remember_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="Remember me ."
+
+                        android:textSize="18dp"
+                        app:buttonTint="@color/salmon" />
 
                     <TextView
                         android:id="@+id/Learn_more"
@@ -264,6 +244,7 @@
                         android:layout_margin="@dimen/default_gap"
                         android:layout_marginTop="10dp"
                         android:text="Learn more"
+
                         android:textColor="@color/salmon"
                         android:textSize="15sp"
                         android:textStyle="bold"

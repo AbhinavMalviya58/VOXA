@@ -11,6 +11,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -36,10 +38,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class loginTab extends AppCompatActivity {
 private EditText login_password, login_email;
+LinearLayout google, facebook;
+TextView join_voxa;
 Button signup_btn1st, login_button;
 private CheckBox showPassword;
 Animation animation;
-ImageView google,logo;
+ImageView logo;
 FirebaseAuth mAuth;
 FirebaseDatabase database;
 FirebaseUser mUser;
@@ -56,9 +60,12 @@ GoogleSignInOptions gso;
         login_button = findViewById(R.id.login_button);
         login_email = findViewById(R.id.login_email);
         google = findViewById(R.id.google);
+        facebook= findViewById(R.id.facebook);
         logo = findViewById(R.id.logo);
         login_password = findViewById(R.id.login_password);
         showPassword = findViewById(R.id.showPassword);
+        join_voxa = findViewById(R.id.join_voxa);
+
 
         animation = AnimationUtils.loadAnimation(loginTab.this,R.anim.imganim);
 //        logo.startAnimation(animation);
@@ -90,11 +97,26 @@ GoogleSignInOptions gso;
        if(account != null){
            navigateToSecondActivity();
        }
-
+       join_voxa.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(loginTab.this, signupTab.class);
+               startActivity(intent);
+               Animatoo.INSTANCE.animateSwipeLeft(loginTab.this);
+               Toast.makeText(loginTab.this, "Join VOXA", Toast.LENGTH_SHORT).show();
+           }
+       });
        google.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               SignIn();
+//               SignIn();
+               Toast.makeText(loginTab.this, "Sign in with Google", Toast.LENGTH_SHORT).show();
+           }
+       });
+       facebook.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Toast.makeText(loginTab.this, "Sign in with Facebook", Toast.LENGTH_SHORT).show();
            }
        });
     }
@@ -119,7 +141,6 @@ GoogleSignInOptions gso;
             }
         }
     }
-
     private void firebaseAuthWithGoogle(String idToken){
 
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken,null);

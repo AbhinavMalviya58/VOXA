@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         arrUserModel.add(new userModel(R.drawable.logo, R.drawable.facebook, "Abhinav Malviya", "hai ", "@string/random_text"));
         arrUserModel.add(new userModel(R.drawable.logo, R.drawable.dp, "Abhinav Malviya", "hai ", "@string/random_text"));
         arrUserModel.add(new userModel(R.drawable.logo, R.drawable.google, "Abhinav Malviya", "hai ", "@string/random_text"));
-        arrUserModel.add(new userModel(R.drawable.logo, R.drawable.img1, "Abhinav Malviya", "hai ", "@string/random_text"));
-        arrUserModel.add(new userModel(R.drawable.logo, R.drawable.img2, "Abhinav Malviya", "hai ", "@string/random_text"));
-        arrUserModel.add(new userModel(R.drawable.logo, R.drawable.images, "Abhinav Malviya", "hai ", "@string/random_text"));
+//        arrUserModel.add(new userModel(R.drawable.logo, R.drawable.img1, "Abhinav Malviya", "hai ", "@string/random_text"));
+//        arrUserModel.add(new userModel(R.drawable.logo, R.drawable.img2, "Abhinav Malviya", "hai ", "@string/random_text"));
+//        arrUserModel.add(new userModel(R.drawable.logo, R.drawable.images, "Abhinav Malviya", "hai ", "@string/random_text"));
         arrUserModel.add(new userModel(R.drawable.logo, R.drawable.facebook, "Abhinav Malviya", "hai ", "@string/random_text"));
         arrUserModel.add(new userModel(R.drawable.logo, R.drawable.facebook, "Abhinav Malviya", "hai ", "@string/random_text"));
         arrUserModel.add(new userModel(R.drawable.logo, R.drawable.facebook, "Abhinav Malviya", "hai ", "@string/random_text"));
